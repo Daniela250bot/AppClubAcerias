@@ -3,7 +3,7 @@ export default function ListarActividad(){
     return(
         <View style={{ flex: 1,justifyContent: "center", alignItems: "center"}}>
            
-            <Text> Editar Actividad </Text>
+            <Text> editar Actividad </Text>
 
         </View>
     )
