@@ -1,11 +1,31 @@
-import { TextInput, Text, View, StyleSheet } from "react-native";
+import { TextInput, Text, View, StyleSheet, Alert } from "react-native";
 import BottonComponent from "../../componentes/BottonComponent";
 import { useState } from "react";
+import { loginUser } from "../../Src/Servicios/AuthService";
 
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const handleLogin = async () => {
+    setLoading(true);
+    try {
+      const result = await loginUser(email,password); 
+      if(result.succes){
+        Alert.alert("Éxito","Has iniciado sesión correctamente", [
+          {Text: "OK", onPress: () => console.log("Login exitoso, redirigiendo automaticamente....")},
+        ]);
+      }else {
+        Alert.alert("Error de Loging", result.message || "ocurrio un error al iniciar sesion", );
+      } 
+    } catch (error) {
+      console.error("Error inesperado de loging: ", error);
+      Alert.alert("Error","Ocurrió un error inesperado al intentar iniciar sesión.");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -32,7 +52,7 @@ export default function Login({ navigation }) {
       />
 
       <BottonComponent
-        title={loading ? "Cargando..." : "Iniciar Sesión"}
+        title= "Iniciar Sesión" onPress={handleLogin} disable={!loading}
       />
 
       <BottonComponent

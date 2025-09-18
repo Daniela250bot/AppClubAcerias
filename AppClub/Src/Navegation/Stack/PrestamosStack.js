@@ -1,7 +1,7 @@
 import { createNativeStackNavigator }   from "@react-navigation/native-stack";
-import ListarPrestamos from "../screen/Prestamos/ListarPrestamos";
-import DetallePrestamos from "../Screen/Prestamos/detallePrestamos";
-import EditarPrestamo from "../Screen/Prestamos/editarPrestamos";
+import ListarPrestamos from "../../../Screen/Prestamos/listarPrestamos";
+import DetallePrestamos from "../../../Screen/Prestamos/detallePrestamos";
+import EditarPrestamo from "../../../Screen/Prestamos/editarPrestamos";
 
 const Stack = createNativeStackNavigator();
 

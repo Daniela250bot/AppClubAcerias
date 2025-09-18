@@ -1,7 +1,7 @@
 import { createNativeStackNavigator }   from "@react-navigation/native-stack";
-import ListarActividades from "../Screen/Actividades/listarActividades";
+import ListarActividades from "../../../Screen/Actividades/listarActividades";
 import DetalleActividad from "../../../Screen/Actividades/detalleActividad";
-import EditarActividad from "../../../Screen/Actividades/editarActividad"
+import EditarActividad from "../../../Screen/Actividades/editarActividad";
 
 const Stack = createNativeStackNavigator();
 

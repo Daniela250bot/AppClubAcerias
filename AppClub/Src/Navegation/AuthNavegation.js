@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "../../Screen/Auth/loging";
+import Login from "../../Screen/Auth/login";
 import Registro from "../../Screen/Auth/registro";
 
 const Stack = createNativeStackNavigator();
@@ -16,7 +16,7 @@ export default function AuthNavegation(){
             <Stack.Screen
                 name="Registro"
                 component={Registro}
-                options={{ title: 'Registro de Usuarios'}}y
+                options={{ title: 'Registro de Usuarios'}}
            />
         </Stack.Navigator>
     )

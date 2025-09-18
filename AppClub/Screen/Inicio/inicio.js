@@ -1,6 +1,6 @@
 import {  ScrollView, StatusBar } from "react-native";
 import { View, Text, StyleSheet } from "react-native";
-import CardComponents from "../../components/CardComponents";
+import CardComponent from "../../componentes/CardComponent";
 
 
     export default function Inicio(){
@@ -13,22 +13,22 @@ import CardComponents from "../../components/CardComponents";
              </View> 
              
          <View style={styles.gridContainer}> 
-            <CardComponents
+            <CardComponent
             tittle="Asociados"
             description=" Gestión de Asociados."
             icon="people-outline"
             />
-            <CardComponents
+            <CardComponent
             tittle="Actividades"
             description=" Gestión de Actividades."
             icon="calendar-outline"
             />
-            <CardComponents
+            <CardComponent
             tittle="Prestamos"
             description=" Gestión de Prestamos."
             icon="cash-outline"
             />
-            <CardComponents
+            <CardComponent
             tittle="Pagos"
             description=" Gestión de pagos."
             icon="card-outline"

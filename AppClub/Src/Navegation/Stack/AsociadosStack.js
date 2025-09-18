@@ -1,7 +1,7 @@
 import { createNativeStackNavigator }   from "@react-navigation/native-stack";
-import ListarAsociados from "../screen/Asociados/ListarAsociados"
-import DetalleAsociados from "../screen/Asociados/detalleAsociado"
-import EditarAsociados from "../screen/Asociados/EditarAsociados"
+import ListarAsociados from "../../../Screen/Asociados/listarAsociados"
+import DetalleAsociados from "../../../Screen/Asociados/detalleAsociados"
+import EditarAsociados from "../../../Screen/Asociados/editarAsociados"
 
 const Stack = createNativeStackNavigator();
 
